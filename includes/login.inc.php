@@ -32,6 +32,7 @@ if (empty($email)|| empty($password)) {
 				$_SESSION["email_session"]=$row["email"];
 				$_SESSION["uid_session"]=$row["uid"];
 				$_SESSION["name_session"]=$row["name"];
+				$_SESSION['phone_session']=$row['phone_no'];
 
 				header("Location: ../afterlogin.php?login=success");
 				exit();
