@@ -20,10 +20,10 @@ if (isset($_SESSION['uid_session'])) {
    include 'bootstrap.php';
    include 'navbarindex.php';
    ?>
-  <!-- <?php
+  <?php
       
        include "slidingimages.php";
-       ?> -->
+       ?>
     
         <div class="container">
         <br>
