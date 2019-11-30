@@ -33,7 +33,7 @@ if (empty($email)|| empty($password)) {
 				$_SESSION["uid_session"]=$row["uid"];
 				$_SESSION["name_session"]=$row["name"];
 
-				header("Location: ../afterlogin.php?login=success");
+				header("Location:../afterlogin.php?login=success");
 				exit();
 			}
 	   }

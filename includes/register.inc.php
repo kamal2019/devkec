@@ -9,8 +9,11 @@ if (isset($_POST['submitFromPerson'])) {
 	$person_phone=$_POST['person_phone'];
 	$person_pwd=$_POST['person_pwd'];
 	$person_confirmpwd=$_POST['person_confirmpwd'];
+	$person_img=$_FILES['person_img']['tmp_name'];
+	$pimg = file_get_contents($person_img);
+	
 	$type="Person";
-	if (empty($person_name)||empty($person_address)||empty($person_email)||empty($person_phone) || empty($person_pwd) || empty($person_confirmpwd)) {
+	if (empty($person_name)||empty($person_address)||empty($person_email)||empty($person_phone) || empty($person_pwd) || empty($person_confirmpwd)|| empty($pimg)) {
 			header("Location: ../register.php?error=emptyfields");
 			exit();
 		//To check for valid email
@@ -23,14 +26,16 @@ if (isset($_POST['submitFromPerson'])) {
 		}elseif(strlen($person_pwd)<6){
 			header("Location: ../signup.php?error=weakpassword");
 			exit();
-		}else{
-			$sql="INSERT into user_table(name,address,email,phone_no,pwd,type) VALUES(?,?,?,?,?,?)";
+		}
+		
+		else{
+			$sql="INSERT into user_table(name,address,email,phone_no,pwd,type,images) VALUES(?,?,?,?,?,?,?)";
 			$stmt=mysqli_stmt_init($conn);
 			if (!mysqli_stmt_prepare($stmt,$sql)) {
 				echo "Failed sql";
 			}else{
 				$hpassword=Password_enc($person_pwd);
-				mysqli_stmt_bind_param($stmt,"ssssss",$person_name,$person_address,$person_email,$person_phone,$hpassword,$type);
+				mysqli_stmt_bind_param($stmt,"ssssss",$person_name,$person_address,$person_email,$person_phone,$hpassword,$type,$pimg);
 				mysqli_stmt_execute($stmt);
 				header("Location: ../register.php?success=registered");
 			}
@@ -51,8 +56,10 @@ if (isset($_POST['submitFromPerson'])) {
 	$org_phone=$_POST['phone_org'];
 	$org_pwd=$_POST['pwd_org'];
 	$org_confirmpwd=$_POST['confirmpwd_org'];
+	$org_img=$_FILES['img_org']['tmp_name'];
+	$orgimg = file_get_contents($org_img);
 	$type="Organization";
-	if (empty($org_name)||empty($org_address)||empty($org_email)||empty($org_phone) || empty($org_pwd) || empty($org_confirmpwd)) {
+	if (empty($org_name)||empty($org_address)||empty($org_email)||empty($org_phone) || empty($org_pwd) || empty($org_confirmpwd) || empty($orgimg)) {
 			header("Location: ../register.php?error=emptyfields");
 			exit();
 		//To check for valid email
@@ -66,13 +73,13 @@ if (isset($_POST['submitFromPerson'])) {
 			header("Location: ../signup.php?error=weakpassword");
 			exit();
 		}else{
-			$sql="INSERT into user_table(name,address,email,phone_no,pwd,type) VALUES(?,?,?,?,?,?)";
+			$sql="INSERT into user_table(name,address,email,phone_no,pwd,type,images) VALUES(?,?,?,?,?,?,?)";
 			$stmt=mysqli_stmt_init($conn);
 			if (!mysqli_stmt_prepare($stmt,$sql)) {
 				echo "Failed sql";
 			}else{
 				$hpassword=Password_enc($org_pwd);
-				mysqli_stmt_bind_param($stmt,"ssssss",$org_name,$org_address,$org_email,$org_phone,$hpassword,$type);
+				mysqli_stmt_bind_param($stmt,"ssssss",$org_name,$org_address,$org_email,$org_phone,$hpassword,$type,$orgimg);
 				mysqli_stmt_execute($stmt);
 				header("Location: ../register.php?success=registered");
 			}
@@ -90,8 +97,10 @@ if (isset($_POST['submitFromPerson'])) {
 	$social_phone=$_POST['social_phone'];
 	$social_pwd=$_POST['social_pwd'];
 	$social_confirmpwd=$_POST['social_confirmpwd'];
+	$social_img=$_FILES['social_img']['tmp_name'];
+	$socialimg = file_get_contents($social_img);
 	$type="Social Worker";
-	if (empty($social_name)||empty($social_address)||empty($social_email)||empty($social_phone) || empty($social_pwd) || empty($social_confirmpwd)) {
+	if (empty($social_name)||empty($social_address)||empty($social_email)||empty($social_phone) || empty($social_pwd) || empty($social_confirmpwd) || empty($socialimg)) {
 			header("Location: ../register.php?error=emptyfields");
 			exit();
 		//To check for valid email
@@ -105,13 +114,13 @@ if (isset($_POST['submitFromPerson'])) {
 			header("Location: ../register.php?error=weakpassword");
 			exit();
 		}else{
-			$sql="INSERT into user_table(name,address,email,phone_no,pwd,type) VALUES(?,?,?,?,?,?)";
+			$sql="INSERT into user_table(name,address,email,phone_no,pwd,type,images) VALUES(?,?,?,?,?,?,?)";
 			$stmt=mysqli_stmt_init($conn);
 			if (!mysqli_stmt_prepare($stmt,$sql)) {
 				echo "Failed sql";
 			}else{
 				$hpassword=Password_enc($social_pwd);
-				mysqli_stmt_bind_param($stmt,"ssssss",$social_name,$social_address,$social_email,$social_phone,$hpassword,$type);
+				mysqli_stmt_bind_param($stmt,"ssssss",$social_name,$social_address,$social_email,$social_phone,$hpassword,$type,$socialimg);
 				mysqli_stmt_execute($stmt);
 				header("Location: ../register.php?success=registered");
 			}
