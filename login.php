@@ -13,15 +13,15 @@
     ?>
     <h1 class="text-center" style="font-family: 'Solway', serif; color: #5822a3;"> Login  </h1>
        <div class="container col-md-4 text-center" style="font-family: 'Solway', serif;">
-         <form action="" method="post">
-         <div class="form-group" style='color: #0dd61a;'>
+    <form action="./includes/login.inc.php" method="post">
+     <div class="form-group" style='color: #0dd61a;'>
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your E-mail" required >
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Your E-mail" required >
    
   </div>
   <div class="form-group"  style='color: #0dd61a;'>
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1"placeholder="Your password" required >
+    <input type="password" class="form-control" name="pwd" id="exampleInputPassword1"placeholder="Your password" required >
   </div>
   
   <button type="submit"  id="singlebutton" name="singlebutton" class="btn btn-primary">Login</button> 
