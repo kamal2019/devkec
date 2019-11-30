@@ -1,3 +1,6 @@
+
+
+
 <?php 
 session_start();
 require "dbh.inc.php";
@@ -30,7 +33,7 @@ if (empty($email)|| empty($password)) {
 				$_SESSION["uid_session"]=$row["uid"];
 				$_SESSION["name_session"]=$row["name"];
 
-				header("Location: ../donate/afterlogin.php?login=success");
+				header("Location: ../afterlogin.php?login=success");
 				exit();
 			}
 	   }
