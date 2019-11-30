@@ -60,8 +60,27 @@
       <div class="line"></div>
     </div>
   </label> <br>
+  <label>
+  <p class="label-txt">Verification file </p>
+  
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="customFile" name="person_img" required >
+    <label class="custom-file-label" for="customFile">Verification file</label>
+  </div>
+    <div class="line-box"> 
+    <div class="line"></div>
+    </div>
+     
+    
+  </label> <br>  <br> <br>
   <button type="submit" name="submitFromPerson" >submit</button>
 </form> 
+ <script>
+   $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+ </script>
 </body>
 </html>
 

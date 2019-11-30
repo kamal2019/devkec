@@ -11,6 +11,18 @@
     <?php
      include 'bootstrap.php';
     ?>
+   <div class="container">
+     <?php
+     include 'navbarindex.php';
+     ?>
+   </div> 
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+     <div class="container col-md-4 text-center" style="font-family: 'Solway', serif;">
     <h1 class="text-center" style="font-family: 'Solway', serif; color: #5822a3;"> Login  </h1>
        <div class="container col-md-4 text-center" style="font-family: 'Solway', serif;">
     <form action="./includes/login.inc.php" method="post">
@@ -21,10 +33,12 @@
   </div>
   <div class="form-group"  style='color: #0dd61a;'>
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" name="pwd" id="exampleInputPassword1"placeholder="Your password" required >
+
+    <input type="password" class="form-control" id="exampleInputPassword1" name="pwd" placeholder="Your password" required >
+
   </div>
   
-  <button type="submit"  id="singlebutton" name="singlebutton" class="btn btn-primary">Login</button> 
+  <button type="submit"  id="singlebutton" name="submit" class="btn btn-primary">Login</button> 
      
      <br>
      <h5 style="color: #2d8043;">OR!</h5>
