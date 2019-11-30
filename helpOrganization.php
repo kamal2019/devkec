@@ -13,7 +13,8 @@ $uid=$_POST["userid"];
 		include "navbarafterlogin.php";
 		include "bootstrap.php";
 	 ?>
-	
+	<br>
+	<br>
 	<div class="container ml-auto mr-auto bg-light mt-4 w-50">
 		<form action="includes/contactoOrg.inc.php" method="POST">
 			<h4 class="display-4 container">Help Organization</h4>

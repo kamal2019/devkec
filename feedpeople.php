@@ -13,6 +13,8 @@
     include "includes/dbh.inc.php";
     include "navbarafterlogin.php";
     ?>
+    <br>
+    <br>
     <?php
     require "includes/function.inc.php";
     $feed= "select * from user_table where type = 'Organization' ";
