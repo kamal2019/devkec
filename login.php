@@ -24,7 +24,7 @@
    
      <div class="container col-md-4 text-center" style="font-family: 'Solway', serif;">
     <h1 class="text-center" style="font-family: 'Solway', serif; color: #5822a3;"> Login  </h1>
-       <div class="container col-md-4 text-center" style="font-family: 'Solway', serif;">
+     
     <form action="./includes/login.inc.php" method="post">
      <div class="form-group" style='color: #0dd61a;'>
     <label for="exampleInputEmail1">Email address</label>
