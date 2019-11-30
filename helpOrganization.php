@@ -29,8 +29,6 @@ $uid=$_POST["userid"];
 		 	<input type="hidden" name="uid" value="<?php echo $uid; ?>">
 		 <button type="Submit" class="btn btn-primary">Submit</button>
 		 </div>
-		 
-		 
 		</form>
 	</div>
 
