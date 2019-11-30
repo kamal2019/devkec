@@ -15,6 +15,7 @@
     ?>
     <br>
     <br>
+    <br>
     <?php
     require "includes/function.inc.php";
     $feed= "select * from user_table where type = 'Organization' ";
