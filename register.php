@@ -31,6 +31,7 @@
     <body>
     <?php
     include 'bootstrap.php';
+    include 'navbarindex.php';
     ?>
      <div class="container">
      <?php

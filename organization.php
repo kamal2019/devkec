@@ -8,8 +8,9 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="func.js"></script>
+<!-- <script src="func.js"></script> -->
 <link rel="stylesheet" href="style.css" type="text/css">
+<script src="func.js"></script>
 </head>
 <body>
 <?php
@@ -60,8 +61,29 @@
       <div class="line"></div>
     </div>
   </label> <br>
+  <label>
+  <p class="label-txt">Verification file </p>
+  
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="customFile" name="img_org" required >
+    <label class="custom-file-label" for="customFile">Verification file</label>
+  </div>
+    <div class="line-box"> 
+    <div class="line"></div>
+    </div>
+     
+    
+  </label> <br>  <br> <br>
+  <br>
   <button type="submit" name="submitFromOrganization" >submit</button>
 </form> 
+  <script>
+   $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+  </script>
+
 </body>
 </html>
 
