@@ -21,7 +21,8 @@
             <button class="btn btn btn-light"><a onclick="show('donate');" class="text-dark card-link" href="listofsocial.php">List of social workers</a></button>
             <button class="btn btn btn-light"><a onclick="show('donate');" class="text-dark card-link" href="donate.php">Donate</a></button>
             <button class="btn  btn btn-light"><a  onclick="show('distribute');"  class="text-dark card-link" href="postfordistribute.php">Distribute</a></button>
-            <button class="btn btn btn-light"><a onclick="show('plantofeedpeople');" class="text-dark card-link" href="feedpeople.php">Plan to Feed People</a></button>
+            <button class="btn btn btn-light"><a onclick="show('plantofeedpeople');" class="text-dark card-link" href="feedpeople.php">Plan to Help People</a></button>
+            <button class="btn btn btn-danger"><a onclick="show('donate');" class="text-dark card-link" href="#">I need help</a></button>
 
 
 

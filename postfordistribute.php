@@ -1,5 +1,4 @@
 <?php
-
 include "bootstrap.php";
 include "navbarafterlogin.php";
 
@@ -102,7 +101,7 @@ include "navbarafterlogin.php";
     <h6 class='card-subtitle mb-2 text-light '>Donor Location:$donorlocation</h6>
     <h6 class='card-subtitle mb-2 text-light '>Number of people can be served from food:$no_people</h6>
     <h6 class='card-subtitle mb-2 text-light '>Number of people can be served from clothes:$no_clothes</h6>
-    <h6 class='card-subtitle mb-2 text-light '>Phone no:$phone</h6>
+    <h6 class='card-subtitle mb-2 text-light '>Phone no:</h6>
     <a href='includes/conformPosts.inc.php?uid=$uid'><button class='btn btn-primary'>Continue to help</button></a>
    
     
